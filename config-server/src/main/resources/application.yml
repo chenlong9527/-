@@ -1,0 +1,27 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
+
+server:
+  port: 8001
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+       git:
+         searchPaths:
+         uri: https://github.com/chenlong9527/hello
+         default-label: main
+  application:
+    name: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka

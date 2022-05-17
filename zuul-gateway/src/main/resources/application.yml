@@ -1,0 +1,15 @@
+server:
+  port: 9528
+spring:
+  application:
+    name: zuul-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+zuul:
+  routes:
+    eureka-hystrix-client: /hystrix/**
+  prefix: /api
+  ignore-local-service: false
+#  strip-prefix: false
