@@ -13,3 +13,4 @@ zuul:
   prefix: /api
   ignore-local-service: false
 #  strip-prefix: false
+#   123test
